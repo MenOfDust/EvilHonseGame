@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 255" role="img" aria-labelledby="title desc">
+  <title id="title">Rook</title><desc id="desc">A scrappy human gladiator wearing teal cloth and gold armor.</desc>
+  <ellipse cx="111" cy="242" rx="64" ry="9" fill="#a55e36" opacity=".2"/>
+  <g stroke="#773d38" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M75 103c-18 10-26 36-32 59l-16 43 17 8 26-38 17-43zM147 101c18 8 29 33 39 56l19 38-16 10-29-34-25-40z" fill="#bc684b"/>
+    <path d="M85 91 58 104l20 45 27-13-10-27 19-3 16 5-10 31 35 13 20-50-32-18z" fill="#ffdf79"/>
+    <path d="m104 131-14 37 13 46h18l2-48 7-1 13 49h19l-6-55-13-41-20 7z" fill="#f0bb63"/>
+    <path d="m102 211-5 22 29 2 1-8-8-16zM143 211l4 22 29-3-1-8-10-13z" fill="#734248"/>
+    <path d="M104 35c8-14 29-18 43-6 9 7 10 20 5 31l-5 14-36 2-12-16c-7-9-4-18 5-25z" fill="#bc684b"/>
+    <path d="m95 47 8-24 32-9 24 19-2 23-15-12-27 4-10 15z" fill="#588c82"/>
+    <path d="m130 65 14 2-7 10-12-3z" fill="#f8d86b" stroke="none"/>
+    <path d="m77 111-18 5 10 23 20-9zM157 108l19 4-9 22-18-9z" fill="#d57a53" stroke="none"/>
+    <path d="m112 53 6 1m15 0 5-1" fill="none" stroke="#593b39" stroke-width="3"/>
+  </g>
+</svg>

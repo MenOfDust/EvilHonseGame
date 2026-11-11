@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#fff4d8">
+  <meta name="description" content="Train a human champion for the entertainment of the galactic arena.">
+  <title>PRIMAL CIRCUIT — Arena Management</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Primal Circuit home"><span class="brand-mark">✳</span><span>PRIMAL<span class="brand-light"> CIRCUIT</span><small>GALACTIC ARENA LEAGUE</small></span></a>
+    <div class="cycle-pill"><span class="live-dot"></span><span id="cycle-label">PRE-SEASON · DAY 1</span></div>
+    <div class="hud"><div class="hud-item"><span class="hud-icon coin">◈</span><span><small>VIEWER CREDITS</small><b id="credits">240</b></span></div><div class="hud-item crowd-item"><span class="hud-icon crowd">✺</span><span><small>GALACTIC HYPE</small><b id="hype">38 <i>/ 100</i></b></span></div></div>
+    <button class="icon-button" id="reset-button" aria-label="Start a new season" title="Start a new season">↻</button>
+  </header>
+  <main id="home">
+    <section class="welcome-row"><div><div class="eyebrow"><span>SEASON 01</span><span>·</span><span>RUSTBELT CIRCUIT</span></div><h1>Make a legend.<br><span>Make them fight.</span></h1><p>Train up. Read the board. Take on the circuit.</p></div><div class="week-stamp"><span>TRAINING WEEK</span><b id="week-number">01</b><small>OF 03</small></div></section>
+    <section class="dashboard-grid">
+      <article class="card champion-card">
+        <div class="card-heading"><div><span class="section-kicker">YOUR CONTENDER</span><h2 id="fighter-name">Rook</h2></div><button class="text-button" id="rename-button">EDIT NAME ↗</button></div>
+        <div class="fighter-scene"><div class="sun-disc"></div><div class="sparkles">✦ <span>·</span> ✧ <span>·</span> ✦</div><div class="fighter-silhouette"><img src="assets/rook.svg" alt="Rook, a human gladiator in teal headgear and golden armor"></div><div class="arena-label"><span class="arena-label-dot"></span>HUMAN / EARTH-03 <span>·</span> CLASS: SCRAPPER</div></div>
+        <div class="fighter-footer"><div><span class="muted-label">CONDITION</span><div class="condition-line"><span class="condition-dot"></span><b id="condition-label">READY</b></div></div><div class="morale-box"><span class="muted-label">MORALE</span><div class="morale-track"><span id="morale-fill"></span></div></div><div class="record"><span class="muted-label">RECORD</span><b id="record">0–0</b></div></div>
+      </article>
+      <article class="card training-card" id="training-card"><div class="card-heading"><div><span class="section-kicker">PICK TODAY'S DRILL</span><h2>Build their edge<span class="heading-spark"> ✳</span></h2></div><span class="day-pill" id="day-label">DAY 1 / 21</span></div><div class="stat-grid" id="stat-grid"></div><div class="drill-list" id="drill-list"></div><div class="action-row"><p id="action-hint">Training costs one day. Rest restores energy.</p><button class="primary-button" id="advance-button">CHOOSE A DRILL <span>→</span></button></div></article>
+      <article class="card arena-card"><div class="card-heading"><div><span class="section-kicker" id="arena-kicker">NEXT ARENA · DAY 7</span><h2 id="arena-title">The Dust Bowl</h2></div><span class="match-tag" id="arena-stage">TRAINING · DAY 1 / 7</span></div><p class="arena-brief" id="arena-brief">Train your contender before the opening bout. Their stats and learned reactions carry into the arena.</p><div class="training-callout" id="training-callout"><b>Next up: the arena.</b> <span>Finish your training days to send your contender in.</span><button id="enter-arena-button" class="arena-button">ENTER TACTICAL ARENA <span>→</span></button></div><div class="arena-battle" id="arena-battle" hidden><div class="matchup"><div><span class="muted-label">YOUR CREW</span><b id="crew-name">Rook &amp; the pit crew</b></div><div class="threat"><span class="muted-label">ENEMY SQUAD</span><b id="enemy-name">The Bone Collectors</b></div></div><div class="battle-hud"><span>☀ &nbsp;DUST BOWL</span><span>INTENTS VISIBLE</span><span><b id="battle-status">PICK A REACTION</b></span></div><div class="battle-board" id="battle-board" role="grid" aria-label="Tactical battle board"></div><div class="intent-legend"><span><i class="legend-hit">×</i> Attack zone</span><span><i class="legend-push">▧</i> Blocking terrain</span><span><i class="legend-you">♟</i> Your contender</span><span><i class="legend-neutral">☄</i> Wild hazard</span></div><p class="arena-message" id="arena-message" aria-live="polite">Rollout: the Bone Collectors are sizing you up.</p><div class="reaction-heading"><div><span class="section-kicker">YOUR COUNTERMOVE</span><p>Pick reactions before resolving the turn <span>·</span> <b id="action-points">2 AP</b></p></div><span class="day-pill">INTENT PREVIEW</span></div><div class="reaction-list" id="reaction-list"></div><div class="arena-footer"><span>ENCOUNTER <b id="round-progress">1</b> OF 3 <span>·</span> <b id="trial-count">0</b> CLEARS</span><button id="trial-button" class="arena-button">RESOLVE TURN <span>→</span></button></div></div></article>
+      <article class="card schedule-card"><div class="card-heading"><div><span class="section-kicker">ROAD TO THE FINALS</span><h2>Season schedule</h2></div><span class="days-remaining" id="days-remaining">21 DAYS LEFT</span></div><div class="schedule-track" id="schedule-track"></div><div class="schedule-note"><span class="note-icon">✦</span><span><b>Alien scouts are watching.</b> Strong performances bring sponsor credits and arena hype.</span></div></article>
+    </section>
+    <section class="activity-row"><div class="activity-title"><span class="pulse">●</span> ARENA DISPATCH <span class="dispatch-live">LIVE</span></div><div id="activity-feed" aria-live="polite"><span>Your contender is waiting for orders.</span></div><button id="feed-toggle" class="feed-toggle" aria-label="Show latest arena dispatch">⌄</button></section>
+  </main>
+  <nav class="bottom-nav" aria-label="Game sections"><button class="nav-item active" data-tab="CAMP"><span>⌂</span><small>CAMP</small></button><button class="nav-item" data-tab="CONTENDER"><span>♙</span><small>CONTENDER</small></button><button class="nav-item arena-nav" data-tab="ARENA"><span>✳</span><small>ARENA</small></button><button class="nav-item" data-tab="ROSTER"><span>♧</span><small>ROSTER</small></button><button class="nav-item" data-tab="LEAGUE"><span>◈</span><small>LEAGUE</small></button></nav>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <dialog id="result-dialog" class="result-dialog"><div class="result-sun">✳</div><span class="section-kicker">DUST BOWL · ROUND REPORT</span><h2 id="result-title">Arena report</h2><p id="result-copy"></p><div class="result-rewards" id="result-rewards"></div><button class="primary-button" id="result-close">BACK TO CAMP <span>→</span></button></dialog>
+  <script src="app.js"></script>
+</body>
+</html>
